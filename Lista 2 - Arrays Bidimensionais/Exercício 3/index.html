@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 3 Lista 2 Arrays Bidimensionais - Houssein e João P.</title>
+
+    <link rel="website icon" type="png" href="../img/codeicon.png">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+    <a href="../index.html"><button class="tbim">Voltar</button></a>
+
+    <center>
+    <div class="titulo">
+        <h2>Exercício 3 - Lista 2 Arrays Bidimensionais</h2>
+        <h3>Houssein e João P.</h3>
+    </div><br>
+
+    <div id="cxdres">
+    <script>
+        // Criando uma matriz 3x3
+        let matriz = [[], [], []];
+        var jujuba = 0
+
+        // Preenchendo a matriz com valores do usuário via prompt
+        for (let i = 0; i < 3; i++) {
+            for (let wanda=0; wanda<3; wanda++) {
+            jujuba++;
+            var valor=parseInt(prompt("Digite um "+jujuba+"º valor"))
+            matriz[i].push(valor);
+        }
+        }
+
+        // Exibindo a matriz no console
+        matriz.forEach(linha => {
+            document.write(linha.join(" | ")+"<br>");
+        });
+        let mv = Math.max(...matriz.flat());
+        document.write("<br>"+"O maior valor digitado é " + mv);
+    </script>
+    </div>
+    </center>
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 4 Lista 2 Arrays Bidimensionais - Houssein e João P.</title>
+
+    <link rel="website icon" type="png" href="../img/codeicon.png">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+    <a href="../index.html"><button class="tbim">Voltar</button></a>
+
+    <center>
+    <div class="titulo">
+        <h2>Exercício 4 - Lista 2 Arrays Bidimensionais</h2>
+        <h3>Houssein e João P.</h3>
+    </div><br>
+
+    <div id="cxdres">
+    <script>
+        let jullynha = [[], [], []];
+        var jujuba=0
+        
+        for (let i = 0; i < 3; i++) {
+        for (let j = 0; j < 3; j++) {
+            jujuba++;
+            var valor=prompt("Digite um "+jujuba+"º valor")
+        
+        if (!isNaN(valor) && valor.trim() !== '') {
+            jullynha[i].push(parseFloat(valor));
+        } else {
+            jullynha[i].push(valor);
+        }
+        }
+        }
+
+        jujuba=0
+
+        jullynha.forEach((linha, i) => {
+        linha.forEach((valor, j) => {
+            document.write(`Posição [${i}][${j}]: valor = ${valor}, tipo = ${typeof valor}`+"<br>");
+        });
+        });
+    </script>
+    </div>
+    </center>
+
+</body>
+</html>
