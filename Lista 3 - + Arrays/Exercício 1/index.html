@@ -4,42 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercício 1 Lista 2 Arrays Bidimensionais - Houssein e João P.</title>
-
-    <link rel="website icon" type="png" href="../img/codeicon.png">
+    <link rel="icon" type="image/png" href="../img/codeicon.png">
     <link rel="stylesheet" href="style.css">
-
 </head>
 <body>
 
     <a href="../index.html"><button class="tbim">Voltar</button></a>
 
     <center>
-    <div class="titulo">
-        <h2>Exercício 1 - Lista 2 Arrays Dimensionais</h2>
-        <h3>Houssein e João P.</h3>
-    </div><br>
+        <div class="titulo">
+            <h2>Exercício 1 - Lista 2 Arrays Dimensionais</h2>
+            <h3>Houssein e João P.</h3>
+        </div><br>
 
-    <div id="cxdres">
+        <div id="cxdres"></div>
+    </center>
+
     <script>
         var agatha = [];
 
-            for (let wanda = 0; wanda < 10; wanda++) {
-                let wiccano = parseInt(prompt(`Digite o ${wanda + 1}º valor:`));
-                agatha.push(wiccano);
-            }
-        
+        for (let wanda = 0; wanda < 10; wanda++) {
+            let wiccano = parseInt(prompt(`Digite o ${wanda + 1}º valor:`));
+            agatha.push(wiccano);
+        }
+
         let huehue = (agatha) => {
             return agatha.map((numero) => {
                 if (numero % 2 === 0) {
-                    return ${numero} - par;
+                    return `${numero} - par`;
                 } else {
-                    return ${numero} - ímpar;
+                    return `${numero} - ímpar`;
                 }
             });
         }
+        document.getElementById("cxdres").innerHTML = huehue(agatha).join("<br>");
     </script>
-    </div>
-    </center>
 
 </body>
 </html>
