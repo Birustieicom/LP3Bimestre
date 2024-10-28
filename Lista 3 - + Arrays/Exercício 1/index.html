@@ -21,21 +21,12 @@
 
     <div id="cxdres">
     <script>
-        var shrek, fiona, farquad
-        var jujuba=0
-        var finn=0
-        const matriz2 = []
-        
-        for (let wanda=0; wanda<3; wanda++) {
-            jujuba++;
-            shrek=parseInt(prompt("Digite um "+jujuba+"º valor"))
-            jujuba++;
-            fiona=parseInt(prompt("Digite um "+jujuba+"º valor"))
-            jujuba++;
-            farquad=parseInt(prompt("Digite um "+jujuba+"º valor"))
-            matriz2[finn] = [shrek, fiona, farquad]
-            finn++
-        }
+        var agatha = [];
+
+            for (let wanda = 0; wanda < 10; wanda++) {
+                let wiccano = parseInt(prompt(`Digite o ${wanda + 1}º valor:`));
+                agatha.push(wiccano);
+            }
         
         let huehue = (agatha) => {
             return agatha.map((numero) => {
