@@ -20,42 +20,42 @@
 
     <div id="cxdres">
         <script>
-            function obterProdutos() {
+            function rp() {
                 var produtos = [];
-                for (let i = 0; i < 4; i++) {
-                    var nome = prompt(`Digite o nome do produto ${i + 1}:`);
-                    var preco = parseFloat(prompt(`Digite o preço do produto ${i + 1}:`));
+                for (let wanda = 0; wanda < 4; wanda++) {
+                    var nome = prompt(`Digite o nome do produto ${wanda + 1}:`);
+                    var preco = parseFloat(prompt(`Digite o preço do produto ${wanda + 1}:`));
                     produtos.push({ nome, preco });
                 }
                 return produtos;
             }
 
-            function calcularValores(produtos) {
+            function cv(produtos) {
                 return produtos.reduce((acumulador, produto) => {
                     acumulador.total += produto.preco;
 
-                    if (produto.preco > acumulador.maisCaro.preco) {
-                        acumulador.maisCaro = produto;
+                    if (produto.preco > acumulador.mc.preco) {
+                        acumulador.mc = produto;
                     }
 
-                    if (produto.preco < acumulador.maisBarato.preco) {
-                        acumulador.maisBarato = produto;
+                    if (produto.preco < acumulador.mb.preco) {
+                        acumulador.mb = produto;
                     }
 
                     return acumulador;
                 }, {
                     total: 0,
-                    maisCaro: { nome: '', preco: -Infinity },
-                    maisBarato: { nome: '', preco: Infinity }
+                    mc: { nome: '', preco: -Infinity },
+                    mb: { nome: '', preco: Infinity }
                 });
             }
 
-            var produtos = obterProdutos();
-            var resultado = calcularValores(produtos);
+            var produtos = rp();
+            var resultado = cv(produtos);
 
             document.write(`Preço total: R$ ${resultado.total.toFixed(2)}<br>`);
-            document.write(`Produto mais caro: ${resultado.maisCaro.nome} - R$ ${resultado.maisCaro.preco.toFixed(2)}<br>`);
-            document.write(`Produto mais barato: ${resultado.maisBarato.nome} - R$ ${resultado.maisBarato.preco.toFixed(2)}<br>`);
+            document.write(`Produto mais caro: ${resultado.mc.nome} - R$ ${resultado.mc.preco.toFixed(2)}<br>`);
+            document.write(`Produto mais barato: ${resultado.mb.nome} - R$ ${resultado.mb.preco.toFixed(2)}<br>`);
         </script>
     </div>
     </center>
