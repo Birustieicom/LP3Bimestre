@@ -21,25 +21,25 @@
     <div id="cxdres">
         <script>
             function rp() {
-                var produtos = [];
+                var blogueirinha = [];
                 for (let wanda = 0; wanda < 4; wanda++) {
                     var nome = prompt(`Digite o nome do produto ${wanda + 1}:`);
                     var preco = parseFloat(prompt(`Digite o preço do produto ${wanda + 1}:`));
-                    produtos.push({ nome, preco });
+                    blogueirinha.push({ nome, preco });
                 }
-                return produtos;
+                return blogueirinha;
             }
 
-            function cv(produtos) {
-                return produtos.reduce((acumulador, produto) => {
-                    acumulador.total += produto.preco;
+            function cv(blogueirinha) {
+                return blogueirinha.reduce((acumulador, miranda) => {
+                    acumulador.total += miranda.preco;
 
-                    if (produto.preco > acumulador.mc.preco) {
-                        acumulador.mc = produto;
+                    if (miranda.preco > acumulador.mc.preco) {
+                        acumulador.mc = miranda;
                     }
 
-                    if (produto.preco < acumulador.mb.preco) {
-                        acumulador.mb = produto;
+                    if (miranda.preco < acumulador.mb.preco) {
+                        acumulador.mb = miranda;
                     }
 
                     return acumulador;
@@ -50,8 +50,8 @@
                 });
             }
 
-            var produtos = rp();
-            var resultado = cv(produtos);
+            var blogueirinha = rp();
+            var resultado = cv(blogueirinha);
 
             document.write(`Preço total: R$ ${resultado.total.toFixed(2)}<br>`);
             document.write(`Produto mais caro: ${resultado.mc.nome} - R$ ${resultado.mc.preco.toFixed(2)}<br>`);
